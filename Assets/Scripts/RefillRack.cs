@@ -27,14 +27,11 @@ public class RefillRack : MonoBehaviour {
         GameObject newDodgeball;
         for (int i = 0; i < 4; i++)
         {
-            for (int j = 0; j < 2; j++)
+            for (int j = 0; j < 6; j++)
             {
-                for (int k = 0; k < 6; k++)
-                {
-                    newPosition = transform.position + startPoint + new Vector3(offset.x * j, offset.y * i, offset.z * k);
-                    
-                    newDodgeball = Instantiate(ballPrefab, newPosition, Quaternion.identity);
-                }
+                float k = ((j < 3)? 0.0f: 0.1f);
+                newPosition = transform.position + startPoint + new Vector3(offset.x * ((i%2==0)? 0:1), offset.y * i, offset.z * j + k);
+                newDodgeball = Instantiate(ballPrefab, newPosition, Quaternion.identity);
             }
         }
     }
