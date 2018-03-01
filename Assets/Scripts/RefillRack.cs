@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class RefillRack : MonoBehaviour {
-    [SerializeField]
-    private GameObject ballPrefab;
+    public GameObject ballPrefab;
     private GameObject rack = GameObject.Find("Basketball rack");
     private float projectileForce = 20f;
     private Vector3 startPoint;
