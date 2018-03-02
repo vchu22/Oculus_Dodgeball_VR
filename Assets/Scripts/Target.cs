@@ -51,7 +51,6 @@ public class Target : MonoBehaviour
             y = 1.3f,
             z = rand.Next(-200, 100) * 0.1f;
         Vector3 vtr = new Vector3(x, y, z);
-        Debug.Log("Dest: "+vtr);
         destination = vtr;
     }
 }
