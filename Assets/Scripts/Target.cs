@@ -23,18 +23,16 @@ public class Target : MonoBehaviour
         Vector3 from = transform.position;
         if (from == destination)
         {
-            Debug.Log("from == dest");
             setDestination();
         }
         transform.position = Vector3.MoveTowards(from, destination, speed * Time.deltaTime);
-        Debug.Log("Moved to (x: " + destination.x + ", y: "+ destination.y + ", z: " + destination.z+")");
     }
 
     // what to do when collision occurs
-    private void OnCollisionEnter(Collision collisionInfo)
+    private void OnCollisionEnter(Collision collision)
     {
         // target will disappear when hit by a ball
-        if (collisionInfo.collider.tag == "Ball")
+        if (collision.collider.tag == "Ball")
         {
             Destroy(gameObject);
             int gamescore = gameStat.score++;
@@ -46,13 +44,14 @@ public class Target : MonoBehaviour
             setDestination();
         }
     }
+
     private void setDestination()
     {
-        float x = rand.Next(-490, 490) * 0.01f,
+        float x = rand.Next(-200, 200) * 0.1f,
             y = 1.3f,
-            z = rand.Next(-490, 490) * 0.01f;
-        Debug.Log("Dest (x: " + x + ", y: " + y + ", z: " + z+")");
+            z = rand.Next(-200, 100) * 0.1f;
         Vector3 vtr = new Vector3(x, y, z);
+        Debug.Log("Dest: "+vtr);
         destination = vtr;
     }
 }
