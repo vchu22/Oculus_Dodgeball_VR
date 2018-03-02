@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Ball
   - Projectile
+  - Target
   layers:
   - Default
   - TransparentFX
