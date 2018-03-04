@@ -2,7 +2,8 @@
 This is my first VR project developed using Unity Game Engine and Oculus Utility Packages.
 
 ## Gameplay
-Pick up the dodgeball in front you throw it at the targets to clear the room.
+Pick up a ball and throw it at one of the moving targets to clear the room.
+![Alt Text](gameplay.gif)
 
 ## Requirements
 * Oculus Rift HMD
