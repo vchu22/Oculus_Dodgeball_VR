@@ -35,6 +35,7 @@ public class Target : MonoBehaviour
         if (collision.collider.tag == "Ball")
         {
             Destroy(gameObject);
+            Destroy(collision.gameObject);
             int gamescore = gameStat.score++;
             Debug.Log("Score: " + gamescore);
         }
