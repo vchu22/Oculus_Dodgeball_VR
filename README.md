@@ -1,9 +1,9 @@
 # Unity OculusVR Exercise
 This is my first VR project developed using Unity Game Engine and Oculus Utility Packages.
+![Alt Text](gameplay.gif)
 
 ## Gameplay
 Pick up a ball and throw it at one of the moving targets to clear the room.
-![Alt Text](gameplay.gif)
 
 ## Requirements
 * Oculus Rift HMD
