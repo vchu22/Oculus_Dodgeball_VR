@@ -10,7 +10,7 @@ public class GameStat : MonoBehaviour {
     // Use this for initialization
     void Start () {
         score = 0;
-        totalTargets = rand.Next(15);
+        totalTargets = rand.Next(1, 15); // ensure there is at least one in the scene
         for (int i = 0; i < totalTargets; i++)
             generateTargets();
         Debug.Log("The room has a total of "+ totalTargets + " targets");
