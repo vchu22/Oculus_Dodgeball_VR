@@ -7,20 +7,20 @@ public class GameStat : MonoBehaviour {
     public GameObject targetPrefab;
     int totalTargets;
     System.Random rand = new System.Random();
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
         score = 0;
         totalTargets = rand.Next(15);
         for (int i = 0; i < totalTargets; i++)
             generateTargets();
         Debug.Log("The room has a total of "+ totalTargets + " targets");
-        
     }
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    
+    // Update is called once per frame
+    void Update () {
+        if (Input.GetKeyDown(KeyCode.Escape))
+            Application.Quit();
+    }
 
     private void generateTargets()
     {
