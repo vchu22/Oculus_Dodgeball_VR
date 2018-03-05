@@ -1,4 +1,4 @@
-# Unity OculusVR Exercise
+# Dodgeball VR
 This is my first VR project developed using Unity Game Engine and Oculus Utility Packages.
 ![Alt Text](gameplay.gif)
 
