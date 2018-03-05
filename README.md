@@ -3,7 +3,7 @@ This is my first VR project developed using Unity Game Engine and Oculus Utility
 ![Alt Text](gameplay.gif)
 
 ## Gameplay
-Pick up a ball and throw it at one of the moving targets. The goal of this game is to clear the room of the moving targets.
+Pick up a ball and throw it at one of the moving targets. The goal of this game is to clear the room of moving targets.
 
 ## Requirements
 * Oculus Rift HMD
