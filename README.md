@@ -11,7 +11,10 @@ Pick up a ball and throw it at one of the moving targets. The goal of this game 
 * Oculus Sensors
 
 ## Controls
+### Oculus Touch
 ![alt text](http://www.ovrnews.com/wp-content/uploads/2016/12/touch-button-layout.jpg "Oculus Touch Diagram")
   * Move Around: Left Thumbstick
   * Rotate Canera: Right Thumbstick
   * Grab: (Left or Right) Grip Button
+### Keyboard
+  * Esc: Quit
