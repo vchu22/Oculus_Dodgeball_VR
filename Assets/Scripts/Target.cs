@@ -10,7 +10,7 @@ public class Target : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        gameStat = GameObject.Find("GameUniverse").GetComponent<GameStat>();
+        gameStat = GameObject.Find("GameScript").GetComponent<GameStat>();
         destination = new Vector3();
         speed = 1f;
         setDestination();
