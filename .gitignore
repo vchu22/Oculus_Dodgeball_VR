@@ -8,8 +8,6 @@ Thumbs.db
 
 Library
 Temp
-*.csproj
 *.pidb
-*.sln
 *.userprefs
 *.meta
