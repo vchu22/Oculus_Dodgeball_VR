@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class GameStat : MonoBehaviour {
-    public int score;
+    [HideInInspector] public int score;
     public GameObject targetPrefab;
     int totalTargets;
     System.Random rand = new System.Random();
