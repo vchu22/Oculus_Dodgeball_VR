@@ -3,12 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class RefillRack : MonoBehaviour {
-    public GameObject ballPrefab;
+    [SerializeField] private GameObject ballPrefab;
     private GameObject rack;
-    private float projectileForce = 20f;
     private Vector3 startPoint;
     private Vector3 offset;
-    // Use this for initialization
     void Start () {
         rack = GameObject.Find("Basketball rack");
         startPoint = new Vector3(0.16f, 0.1f, -0.4f);
@@ -16,7 +14,6 @@ public class RefillRack : MonoBehaviour {
         Generate();
     }
     
-    // Update is called once per frame
     void Update () {
         
     }
