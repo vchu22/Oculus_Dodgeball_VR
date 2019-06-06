@@ -817,7 +817,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   VRPlayerController: {fileID: 3745069618499036808, guid: 9b73cdf6e55c5c04b97ed71b3977a749,
     type: 3}
-  NonVRPlayerController: {fileID: 375811618208549678, guid: c405c30737f078b4c8a2fa7e7e02db06,
+  NonVRPlayerController: {fileID: 3234724190983152517, guid: c405c30737f078b4c8a2fa7e7e02db06,
     type: 3}
 --- !u!1 &456588297
 GameObject:
