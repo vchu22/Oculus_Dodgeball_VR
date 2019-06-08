@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class GameStat : MonoBehaviour {
     [HideInInspector] public int score;
-    public GameObject targetPrefab;
-    int totalTargets;
+    [SerializeField] private GameObject targetPrefab;
+    public int totalTargets;
     System.Random rand = new System.Random();
+    
     // Use this for initialization
     void Start () {
         score = 0;
@@ -24,10 +25,7 @@ public class GameStat : MonoBehaviour {
 
     private void generateTargets()
     {
-        float x = rand.Next(-499, 499) * 0.01f,
-            y = 1.3f,
-            z = rand.Next(-499, 499) * 0.01f;
-        Vector3 pos = new Vector3(x, y, z);
+        Vector3 pos = new Vector3(rand.Next(-499, 499) * 0.01f, 1.3f, rand.Next(-499, 499) * 0.01f);
         GameObject newTarget = Instantiate(targetPrefab, pos, Quaternion.identity);
     }
 }
