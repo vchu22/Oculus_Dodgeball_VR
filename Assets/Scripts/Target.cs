@@ -6,13 +6,11 @@ public class Target : MonoBehaviour
     Vector3 destination;
     private System.Random rand = new System.Random();
     GameStat gameStat;
-    private float speed;
+
     // Use this for initialization
     void Start()
     {
         gameStat = GameObject.Find("GameScript").GetComponent<GameStat>();
-        destination = new Vector3();
-        speed = 1f;
         setDestination();
     }
 
@@ -25,7 +23,7 @@ public class Target : MonoBehaviour
         {
             setDestination();
         }
-        transform.position = Vector3.MoveTowards(from, destination, speed * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(from, destination, Time.deltaTime);
     }
 
     // what to do when collision occurs
@@ -48,10 +46,6 @@ public class Target : MonoBehaviour
 
     private void setDestination()
     {
-        float x = rand.Next(-200, 200) * 0.1f,
-            y = 1.3f,
-            z = rand.Next(-200, 100) * 0.1f;
-        Vector3 vtr = new Vector3(x, y, z);
-        destination = vtr;
+        destination = new Vector3(rand.Next(-200, 200) * 0.1f, 1.3f, rand.Next(-200, 100) * 0.1f);
     }
 }
