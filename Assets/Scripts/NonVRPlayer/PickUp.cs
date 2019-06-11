@@ -14,6 +14,8 @@ public class PickUp : MonoBehaviour
     private Vector3 direction;
     private float currentHitDistance;
     private GameObject selectedBall;
+    private GameObject pickedUpBall;
+
     // Update is called once per frame
     void Update()
     {
@@ -25,7 +27,7 @@ public class PickUp : MonoBehaviour
         origin = transform.position;
         direction = transform.forward;
         RaycastHit hit;
-        if (Physics.SphereCast(origin, sphereRadius, direction, out hit, maxDistance, layerMask, QueryTriggerInteraction.UseGlobal) && hit.transform.gameObject.CompareTag("Ball"))
+        if (Physics.SphereCast(origin, sphereRadius, direction, out hit, maxDistance, layerMask, QueryTriggerInteraction.UseGlobal) && hit.transform.gameObject.CompareTag("Ball") && !pickedUpBall)
         {
             selectedBall = hit.transform.gameObject;
             currentHitDistance = hit.distance;
@@ -34,12 +36,28 @@ public class PickUp : MonoBehaviour
             {
                 selection.material = highlightedMaterial;
             }
+
+            // Click left mouse button pick up a ball
+            if (Input.GetKeyUp(KeyCode.Mouse0))
+            {
+                pickupBall();
+            }
         } else {
             currentHitDistance = maxDistance;
         }
-        
+
     }
 
+    private void pickupBall()
+    {
+        selectedBall.GetComponent<Rigidbody>().useGravity = false;
+        selectedBall.GetComponent<SphereCollider>().enabled = false;
+        selectedBall.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.FreezeAll;
+        selectedBall.transform.SetParent(transform);
+        selectedBall.transform.localPosition = new Vector3(0, -0.3f, 0.7f);
+        pickedUpBall = selectedBall;
+    }
+    
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
