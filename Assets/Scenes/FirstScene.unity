@@ -803,6 +803,7 @@ MonoBehaviour:
   score: 0
   targetPrefab: {fileID: 1731419831378492, guid: 43daa4c62795440458633a9306a28ad5,
     type: 3}
+  totalTargets: 0
 --- !u!114 &384212268
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2539,5 +2540,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Basketball rack
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 640d778a15d375546995aa792c582b42, type: 3}
