@@ -15,6 +15,7 @@ public class PickUp : MonoBehaviour
     private float currentHitDistance;
     private GameObject selectedBall;
     private GameObject pickedUpBall;
+    private bool throwing = false;
 
     // Update is called once per frame
     void Update()
@@ -44,8 +45,18 @@ public class PickUp : MonoBehaviour
             }
         } else {
             currentHitDistance = maxDistance;
+            // Click left mouse button to set projectile
+            if (Input.GetKeyDown(KeyCode.Mouse0))
+            {
+                throwing = true;
+                Debug.Log("throwing");
+            }
+            // Click right mouse button to drop the ball
+            if (Input.GetKeyUp(KeyCode.Mouse1) && !throwing)
+            {
+                dropBall();
+            }
         }
-
     }
 
     private void pickupBall()
@@ -57,7 +68,16 @@ public class PickUp : MonoBehaviour
         selectedBall.transform.localPosition = new Vector3(0, -0.3f, 0.7f);
         pickedUpBall = selectedBall;
     }
-    
+
+    private void dropBall()
+    {
+        pickedUpBall.GetComponent<Rigidbody>().useGravity = true;
+        pickedUpBall.GetComponent<SphereCollider>().enabled = true;
+        pickedUpBall.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
+        pickedUpBall.transform.parent = null;
+        pickedUpBall = selectedBall;
+    }
+
     private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
