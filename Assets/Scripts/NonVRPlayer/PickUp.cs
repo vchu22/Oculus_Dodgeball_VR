@@ -16,9 +16,17 @@ public class PickUp : MonoBehaviour
     private GameObject selectedBall;
     private GameObject pickedUpBall;
     private bool throwing = false;
+    private CameraMove cameraMove;
+    private float ballThrowingForce;
+
+    private void Awake()
+    {
+        cameraMove = transform.GetComponent<CameraMove>();
+        ballThrowingForce = 50f;
+    }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
         if (selectedBall != null)
         {
@@ -43,18 +51,28 @@ public class PickUp : MonoBehaviour
             {
                 pickupBall();
             }
-        } else {
+        }
+        else
+        {
             currentHitDistance = maxDistance;
-            // Click left mouse button to set projectile
-            if (Input.GetKeyDown(KeyCode.Mouse0))
+            if (pickedUpBall)
             {
-                throwing = true;
-                Debug.Log("throwing");
+                // Click left mouse button to set projectile
+                if (Input.GetMouseButtonDown(0))
+                {
+                    Debug.Log("Setting projectile");
+                    setProjectile();
+                }
+                if (Input.GetMouseButtonUp(0))
+                {
+                    releaseBall();
+                }
             }
+
             // Click right mouse button to drop the ball
-            if (Input.GetKeyUp(KeyCode.Mouse1) && !throwing)
+            if (Input.GetMouseButton(1) && !throwing)
             {
-                dropBall();
+                releaseBall();
             }
         }
     }
@@ -69,13 +87,24 @@ public class PickUp : MonoBehaviour
         pickedUpBall = selectedBall;
     }
 
-    private void dropBall()
+    private void setProjectile()
     {
+        throwing = true;
+        cameraMove.enabled = false;
+    }
+    private void releaseBall()
+    {
+        if (throwing)
+        {
+            pickedUpBall.GetComponent<Rigidbody>().AddForce(this.transform.forward * ballThrowingForce);
+            cameraMove.enabled = true;
+            throwing = false;
+        }
         pickedUpBall.GetComponent<Rigidbody>().useGravity = true;
         pickedUpBall.GetComponent<SphereCollider>().enabled = true;
         pickedUpBall.GetComponent<Rigidbody>().constraints = RigidbodyConstraints.None;
         pickedUpBall.transform.parent = null;
-        pickedUpBall = selectedBall;
+        pickedUpBall = null;
     }
 
     private void OnDrawGizmosSelected()
