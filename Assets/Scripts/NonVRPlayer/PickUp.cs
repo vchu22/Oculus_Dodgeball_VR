@@ -19,10 +19,14 @@ public class PickUp : MonoBehaviour
     private CameraMove cameraMove;
     private float ballThrowingForce;
 
+    private Vector3 origMousePosition;
+    private bool settingProjectile;
+
     private void Awake()
     {
         cameraMove = transform.GetComponent<CameraMove>();
         ballThrowingForce = 50f;
+        settingProjectile = false;
     }
 
     // Update is called once per frame
@@ -89,6 +93,13 @@ public class PickUp : MonoBehaviour
 
     private void setProjectile()
     {
+        if (!settingProjectile)
+        {
+            origMousePosition = Input.mousePosition;
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = false;
+            settingProjectile = true;
+        }
         throwing = true;
         cameraMove.enabled = false;
     }
@@ -96,9 +107,22 @@ public class PickUp : MonoBehaviour
     {
         if (throwing)
         {
-            pickedUpBall.GetComponent<Rigidbody>().AddForce(this.transform.forward * ballThrowingForce);
+            if (settingProjectile)
+            {
+                Debug.Log("Throw");
+                float offset = origMousePosition.y - Input.mousePosition.y;
+                Debug.Log("Force multiplier: " + offset);
+                pickedUpBall.GetComponent<Rigidbody>().AddForce(this.transform.forward * (ballThrowingForce + offset * 0.2f));
+            }
+            else
+            {
+                pickedUpBall.GetComponent<Rigidbody>().AddForce(this.transform.forward * ballThrowingForce);
+            }
             cameraMove.enabled = true;
             throwing = false;
+            settingProjectile = false;
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
         }
         pickedUpBall.GetComponent<Rigidbody>().useGravity = true;
         pickedUpBall.GetComponent<SphereCollider>().enabled = true;
