@@ -9,8 +9,8 @@ public class RefillRack : MonoBehaviour {
     private Vector3 offset;
     void Start () {
         rack = GameObject.Find("Basketball rack");
-        startPoint = new Vector3(0.16f, 0.1f, -0.4f);
-        offset = new Vector3(-0.32f, -0.4f, 0.4f);
+        startPoint = new Vector3(-0.4f, 0.1f, 0.16f);
+        offset = new Vector3(0.4f, -0.4f, -0.32f);
         Generate();
     }
     
@@ -27,7 +27,7 @@ public class RefillRack : MonoBehaviour {
             for (int j = 0; j < 6; j++)
             {
                 float k = ((j < 3)? 0.0f: 0.1f);
-                newPosition = transform.position + startPoint + new Vector3(offset.x * ((i%2==0)? 0:1), offset.y * i, offset.z * j + k);
+                newPosition = transform.position + startPoint + new Vector3(offset.x * j + k, offset.y * i, offset.z * ((i%2==0)? 0:1));
                 newDodgeball = Instantiate(ballPrefab, newPosition, Quaternion.identity);
             }
         }
