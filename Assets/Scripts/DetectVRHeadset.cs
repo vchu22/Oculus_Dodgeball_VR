@@ -13,7 +13,7 @@ public class DetectVRHeadset : MonoBehaviour
             Debug.LogWarning("VR Headset Found");
             Instantiate(VRPlayerController, new Vector3(0,1,0), Quaternion.identity);
         } else {
-            Debug.LogWarning("VR Headset Not Found");
+            Debug.LogWarning("VR Headset Not Found: Activate non-VR Mode");
             Instantiate(NonVRPlayerController, new Vector3(0, 1, 0), Quaternion.identity);
         }
     }

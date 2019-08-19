@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2894925370314598885}
   - component: {fileID: 2894925370314598907}
-  - component: {fileID: 2894925370314598884}
   m_Layer: 0
   m_Name: Basketball rack
   m_TagString: Untagged
@@ -72,13 +71,13 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &2894925370314598884
+--- !u!114 &2298511914704754621
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2894925370314598910}
+  m_GameObject: {fileID: 5577600654539933843}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b91bd2ef32e89b744bff374a1aef8058, type: 3}
@@ -92,11 +91,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2894925370314598885}
     m_Modifications:
-    - target: {fileID: -927199367670048503, guid: 0b00ffe3cb13e8347970ac6de93b9cbf,
-        type: 3}
-      propertyPath: m_Name
-      value: Basketball rack
-      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 0b00ffe3cb13e8347970ac6de93b9cbf,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -167,6 +161,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: -927199367670048503, guid: 0b00ffe3cb13e8347970ac6de93b9cbf,
+        type: 3}
+      propertyPath: m_Name
+      value: Basketball rack
+      objectReference: {fileID: 0}
     - target: {fileID: -1504981713932161579, guid: 0b00ffe3cb13e8347970ac6de93b9cbf,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -174,6 +173,12 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: c5f4b3dba0cd0cf49b2f74bb41b74ae1, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b00ffe3cb13e8347970ac6de93b9cbf, type: 3}
+--- !u!1 &5577600654539933843 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 0b00ffe3cb13e8347970ac6de93b9cbf,
+    type: 3}
+  m_PrefabInstance: {fileID: 4487400694874739098}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8880192358595967616 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 0b00ffe3cb13e8347970ac6de93b9cbf,
