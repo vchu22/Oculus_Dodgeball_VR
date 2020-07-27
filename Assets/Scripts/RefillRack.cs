@@ -7,7 +7,7 @@ public class RefillRack : MonoBehaviour {
     private Vector3 startPoint;
     private float rotation;
     void Start () {
-        startPoint = new Vector3(0.16f, 0.1f, -0.4f);
+        startPoint = new Vector3(0.16f, 1.45f, -1.1f);
         rotation = transform.rotation.eulerAngles.y;
         Generate();
     }
