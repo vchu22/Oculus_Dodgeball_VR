@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 112000002, guid: f71c0fa52fe805c4982701790f9da7ff,
+  m_LightingDataAsset: {fileID: 112000000, guid: f71c0fa52fe805c4982701790f9da7ff,
     type: 2}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -520,9 +520,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 0
-  m_CookingOptions: 14
+  m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &158512756
 MeshFilter:
@@ -654,9 +654,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 0
-  m_CookingOptions: 14
+  m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &294796238
 MeshFilter:
@@ -910,9 +910,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 0
-  m_CookingOptions: 14
+  m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &456588301
 MeshFilter:
@@ -1004,9 +1004,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 0
-  m_CookingOptions: 14
+  m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &461031634
 MeshFilter:
@@ -1803,9 +1803,9 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 0.1
-  m_Range: 10
-  m_SpotAngle: 30
+  m_Intensity: 0.15
+  m_Range: 5
+  m_SpotAngle: 100.2
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 5
   m_Shadows:
@@ -1835,7 +1835,7 @@ Light:
       e33: 1
     m_UseCullingMatrixOverride: 0
   m_Cookie: {fileID: 0}
-  m_DrawHalo: 1
+  m_DrawHalo: 0
   m_Flare: {fileID: 0}
   m_RenderMode: 0
   m_CullingMask:
@@ -2096,9 +2096,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 0
-  m_CookingOptions: 14
+  m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &1044340035
 MeshRenderer:
@@ -2187,33 +2187,15 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1317066597}
     m_Modifications:
-    - target: {fileID: 0}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 6250719537945090208, guid: 0b00ffe3cb13e8347970ac6de93b9cbf,
-        type: 3}
-    - target: {fileID: 0}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_CookingOptions
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 6250719537945090208, guid: 0b00ffe3cb13e8347970ac6de93b9cbf,
-        type: 3}
     - target: {fileID: 2894925370314598885, guid: 640d778a15d375546995aa792c582b42,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.254
       objectReference: {fileID: 0}
     - target: {fileID: 2894925370314598885, guid: 640d778a15d375546995aa792c582b42,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.3496357
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2894925370314598885, guid: 640d778a15d375546995aa792c582b42,
         type: 3}
@@ -2360,9 +2342,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 0
-  m_CookingOptions: 14
+  m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &1397041910
 MeshFilter:
@@ -2391,26 +2373,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ballPrefab: {fileID: 1992104269413490, guid: f241767bbb7bb3648b3ef8501f320de8, type: 3}
---- !u!1 &1426670668 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5577600654539933843, guid: 640d778a15d375546995aa792c582b42,
-    type: 3}
-  m_PrefabInstance: {fileID: 1353386541}
-  m_PrefabAsset: {fileID: 0}
---- !u!64 &1426670672
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1426670668}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 6250719537945090208, guid: 0b00ffe3cb13e8347970ac6de93b9cbf, type: 3}
 --- !u!1 &2002631737
 GameObject:
   m_ObjectHideFlags: 0
@@ -2573,11 +2535,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1317066597}
     m_Modifications:
-    - target: {fileID: 2243837469398567055, guid: a1f72f9a0e52f11468f26207526277a0,
-        type: 3}
-      propertyPath: m_Name
-      value: Barricades
-      objectReference: {fileID: 0}
     - target: {fileID: 2243837469398567054, guid: a1f72f9a0e52f11468f26207526277a0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2632,6 +2589,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2243837469398567055, guid: a1f72f9a0e52f11468f26207526277a0,
+        type: 3}
+      propertyPath: m_Name
+      value: Barricades
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a1f72f9a0e52f11468f26207526277a0, type: 3}

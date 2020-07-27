@@ -39,3 +39,28 @@ The following packages were updated:
   com.unity.xr.legacyinputhelpers from version 2.0.2 to 2.0.4
 The following packages were removed:
   com.unity.package-manager-ui@2.2.0
+
+=== Sun Jul 26 09:35:05 2020
+
+Packages were changed.
+Update Mode: updateDependencies
+
+The following packages were updated:
+  com.unity.ads from version 2.0.8 to 3.4.5
+  com.unity.analytics from version 3.3.2 to 3.3.5
+  com.unity.ide.rider from version 1.0.8 to 1.1.4
+  com.unity.ide.vscode from version 1.0.7 to 1.2.1
+  com.unity.multiplayer-hlapi from version 1.0.4 to 1.0.6
+  com.unity.test-framework from version 1.0.17 to 1.1.14
+  com.unity.timeline from version 1.1.0 to 1.2.6
+  com.unity.xr.legacyinputhelpers from version 2.0.4 to 2.1.4
+  com.unity.xr.oculus.standalone from version 1.36.0 to 2.38.4
+  com.unity.xr.openvr.standalone from version 1.0.5 to 2.0.5
+
+=== Sun Jul 26 18:36:30 2020
+
+Packages were changed.
+Update Mode: updateDependencies
+
+The following packages were updated:
+  com.unity.ads from version 3.4.5 to 3.4.7
