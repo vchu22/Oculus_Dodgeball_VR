@@ -83,6 +83,7 @@ GameObject:
   - component: {fileID: 7768704695371483093}
   - component: {fileID: 1268847611917434046}
   - component: {fileID: 2148139091924024316}
+  - component: {fileID: 5471000551476252487}
   m_Layer: 0
   m_Name: Basketball rack
   m_TagString: Untagged
@@ -165,3 +166,15 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 6250719537945090208, guid: 0c57abf4b849a5a4aba6f641d1ca44f8, type: 3}
+--- !u!114 &5471000551476252487
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3800585701189083001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4485c44d4525ad94ea9d1c72b4eb1099, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
