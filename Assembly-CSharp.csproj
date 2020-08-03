@@ -358,6 +358,7 @@
     <Compile Include="Assets\Scripts\NonVRPlayer\PickUp.cs" />
     <Compile Include="Assets\Scripts\NonVRPlayer\PlayerMove.cs" />
     <Compile Include="Assets\Scripts\RefillRack.cs" />
+    <Compile Include="Assets\Scripts\StartMenu\FullscreenToggle.cs" />
     <Compile Include="Assets\Scripts\StartMenu\MainMenu.cs" />
     <Compile Include="Assets\Scripts\Target.cs" />
     <Compile Include="Assets\Scripts\VRModeObjectScale.cs" />
