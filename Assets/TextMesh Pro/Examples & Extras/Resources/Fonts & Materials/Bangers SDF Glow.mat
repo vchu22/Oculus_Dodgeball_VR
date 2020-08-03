@@ -4,8 +4,9 @@
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_Name: Bangers SDF Glow
   m_Shader: {fileID: 4800000, guid: 68e6db2ebdc24f95958faec2be5558d6, type: 3}
   m_ShaderKeywords: GLOW_ON UNDERLAY_ON
@@ -27,7 +28,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _FaceTex:
-        m_Texture: {fileID: 2800000, guid: 2ce5c55e85304b819a1826ecbc839aa5, type: 3}
+        m_Texture: {fileID: 2800000, guid: d2ea43709b5d434438b42d8d083f2772, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
@@ -58,8 +59,8 @@ Material:
     - _FaceUVSpeedX: 0
     - _FaceUVSpeedY: 0
     - _GlowInner: 0.148
-    - _GlowOffset: 0.433
-    - _GlowOuter: 0.158
+    - _GlowOffset: 0.5
+    - _GlowOuter: 0.202
     - _GlowPower: 0.908
     - _GradientScale: 11
     - _LightAngle: 3.1416
@@ -74,8 +75,8 @@ Material:
     - _PerspectiveFilter: 0
     - _Reflectivity: 10
     - _ScaleRatioA: 0.90909094
-    - _ScaleRatioB: 0.70454544
-    - _ScaleRatioC: 0.70454544
+    - _ScaleRatioB: 0.64772725
+    - _ScaleRatioC: 0.64772725
     - _ScaleX: 1
     - _ScaleY: 1
     - _ShaderFlags: 0
@@ -99,10 +100,10 @@ Material:
     m_Colors:
     - _ClipRect: {r: -10000, g: -10000, b: 10000, a: 10000}
     - _EnvMatrixRotation: {r: 0, g: 0, b: 0, a: 0}
-    - _FaceColor: {r: 1, g: 1, b: 1, a: 1}
-    - _GlowColor: {r: 0, g: 1, b: 0, a: 1}
+    - _FaceColor: {r: 0.9339623, g: 0.7646238, b: 0.58592916, a: 1}
+    - _GlowColor: {r: 0.7909143, g: 1, b: 0, a: 1}
     - _MaskCoord: {r: 0, g: 0, b: 100000, a: 100000}
-    - _OutlineColor: {r: 0, g: 0.25517216, b: 1, a: 1}
+    - _OutlineColor: {r: 0.26415092, g: 0.05357778, b: 0.0825187, a: 1}
     - _ReflectFaceColor: {r: 0, g: 0, b: 0, a: 1}
     - _ReflectOutlineColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0, g: 0, b: 0, a: 1}
